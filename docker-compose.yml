@@ -4,8 +4,8 @@ services:
     client:
         stdin_open: true
         build:
-            context: ./client
-            dockerfile: Dockerfile
+            context: .
+            dockerfile: Dockerfile.client
         ports:
             - 3000:3000
         volumes:
