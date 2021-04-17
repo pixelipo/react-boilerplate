@@ -2,12 +2,11 @@ FROM node:current-alpine
 
 WORKDIR /app
 
-COPY package.json yarn.lock /app
+COPY package.json yarn.lock /app/
 
 RUN yarn install
 
 COPY . /app
 
-# EXPOSE 3000
-
+# Start app
 CMD ["yarn", "run", "start"]
